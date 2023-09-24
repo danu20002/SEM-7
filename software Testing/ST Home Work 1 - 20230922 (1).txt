@@ -1,0 +1,15 @@
+1. List the IEEE error and fault taxonomy.
+2. Explain the triangle problem statement along with flow chart for traditional implementation.
+3. Explain traditional implementation flowchart. What is the value of “match” and type of triangle for
+following values of sides of triangle? 
+4. Explain the flowchart for the triangle problem statement using structured implementation.
+5. Explain the usage of boundary value analysis with function of two variables and highlight the
+limitations of boundary value analysis.
+6. Explain Worst case test cases for input and output boundary value test cases, for Next date
+problem.
+7. Explain SATM, Wiper Control and Currency Converter.
+8. explain boundary value analysis, with triangle problem.
+9. explain equivalence class testing for commission program.
+10. explain decision table testing applicable to next - date program.
+
+
