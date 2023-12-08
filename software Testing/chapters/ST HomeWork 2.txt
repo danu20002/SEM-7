@@ -1,0 +1,32 @@
+
+with examples all test coverage metrics.
+
+
+
+the basis path testing with  McCabe method,  for an example.
+
+
+
+how much work on cyclomatic complexity to improve programming than testing,  add essential complexity.  use an example of  condensing the an program graph.
+
+
+
+Apply from  guidelines and observations, of McCabe, that "it is important to understand that there are purely criteria that measure the quality of testing and not a procedure to identify the test cases".
+
+
+
+---
+
+ use the commission problem and its program  graph to                 define / use testing.
+
+
+
+du  path test coverage metrics,  for  data flow testing.
+
+
+
+ slice based  testing for Commission program.
+
+
+
+  the commission program in terms of interesting slices,  for the  style and technique.
