@@ -1,0 +1,5 @@
+Mobile computing imp questions
+1.
+With a diagram explain the functions of IEEE 802.16 layers.
+2.
+Identify and explain the functions of Presentation (Ter-1) layer of mobile

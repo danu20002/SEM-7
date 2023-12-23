@@ -1,0 +1,5 @@
+7.3 GPRS network architecture 
+7.3.1 GPRS network enhancements
+8.2 WAP
+9.3.2 IS-95 architecture 
+Smart client architecture
