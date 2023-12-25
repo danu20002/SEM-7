@@ -23,9 +23,17 @@ int binarySearch(int arr[], int l, int r, int x)
 
 int main(void)
 {
-    int arr[] = { 2, 3, 4, 10, 40 };
+    int arr[6];
+    printf("Enter emts 6 of arr in ascending order :");
     int n = sizeof(arr) / sizeof(arr[0]);
-    int x = 3;
+    
+    for(int i = 0 ; i < n ; i++){
+        scanf("%d",&arr[i]);
+    }
+    int x ;
+    printf("Enter key :");
+    scanf("%d", &x);
+    
     int result = binarySearch(arr, 0, n - 1, x);
     (result == -1) ? printf("Element is not present"
                             " in array")
