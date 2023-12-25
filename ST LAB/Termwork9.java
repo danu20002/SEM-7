@@ -5,7 +5,7 @@ public class Termwork9 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter the current date (mm dd yyyy): ");
+        System.out.println("Enter the current date (mm dd yyyy): ");
         int month = scanner.nextInt();
         int day = scanner.nextInt();
         int year = scanner.nextInt();
