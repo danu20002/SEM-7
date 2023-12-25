@@ -13,16 +13,16 @@ int main()
     }
     if((a<b+c)&&(b<a+c)&&(c<a+b))
     {
-    if((a==b)&&(b==c))
-    {
-        printf("Equilateral triangle");
-    }
-        else if((a!=b)&&(a!=c)&&(b!=c))
-    {
-        printf("Scalene triangle");
-    }
-    else
-        printf("Isosceles triangle");
+        if((a==b)&&(b==c))
+        {
+            printf("Equilateral triangle");
+        }
+            else if((a!=b)&&(a!=c)&&(b!=c))
+        {
+            printf("Scalene triangle");
+        }
+        else
+            printf("Isosceles triangle");
     }
     else
     {
