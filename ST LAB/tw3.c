@@ -30,3 +30,17 @@ int main()
     }
     return 0;
 }
+//outputs range need to be changed be carefull when giving output ranges
+
+// Valid triangles:
+// Equilateral: (5, 5, 5)
+// Isosceles: (2, 2, 4), (4, 5, 5)
+// Scalene: (3, 4, 5), (6, 7, 8)
+
+// Invalid triangles:
+// Sides less than 1: (0, 1, 2)
+// Sides greater than 10: (5, 11, 8)
+// Violating triangle inequality: (1, 1, 11), (5, 2, 2)
+
+// Degenerate triangles:
+// (1, 1, 0)
