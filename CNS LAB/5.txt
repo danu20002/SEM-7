@@ -1,0 +1,46 @@
+deffie hellman
+Source Code
+#include<stdio.h>
+ 
+long int power (int a, int b, int mod)
+{
+   long long int t;      
+   if(b==1)
+       return a;
+   t=power (a, b/2, mod);
+   if(b%2==0)
+       return (t*t) %mod;
+   else
+       return (((t*t) %mod) *a) %mod;
+}
+ 
+long long int calculateKey (int a, int x, int q)
+{
+   return power (a, x, q);
+}
+ 
+int main ()
+{
+   int q, alpha, x, a, y, b;
+// both the persons will be agreed upon the common prime number and prime root
+   printf("Enter the prime number and prime root : ");
+   scanf("%d %d", &q, &alpha);
+// A will choose the x
+   printf("Enter the private key of A : ");
+   scanf("%d", &x);
+   a=power(alpha, x, q);
+// B will choose the y
+   printf("Enter the private key of B : ");
+   scanf("%d", &y);
+   b=power(alpha,y,q);
+   printf("A computes key K : %lld \n", power(b, x, q));
+   printf("B computes key K : %lld\n", power(a, y, q));
+   return 0;
+}
+
+Sample Output
+Enter the prime number and prime root : 23 9
+Enter the private key of A : 4
+Enter the private key of B : 3
+A computes key K : 9 
+B computes key K : 9

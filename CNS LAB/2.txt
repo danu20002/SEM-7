@@ -1,0 +1,96 @@
+RSA algorithm
+Source code
+#include <stdio.h>
+ 
+#include<stdlib.h>
+ 
+int gcd(int a,int b)
+{
+int c;
+while(a!=b)
+{
+if(a<b)
+{
+c=a;a=b;b=c;
+}
+a-=b;
+}
+return a;
+}
+ 
+int mod(int m,int e,int n)
+{
+int a=1;
+while(e)
+{
+a=(a*m)%n;
+e--;
+}
+return a;
+}
+ 
+int main()
+{
+int p,q,n,e,m,c,d,x,z;
+int en[100],de[100],j=0;
+printf("\nEnter the value of P & Q\n");
+scanf("%d%d",&p,&q);
+n=p*q;
+z=(p-1)*(q-1);
+for(e=1;e<n;e++)
+{
+if(gcd(e,z)==1)
+{
+en[j]=e;
+printf(" %d",en[j++]);
+}
+}
+printf("\nChoose e\n");
+scanf("%d",&e);
+ 
+if(gcd(e,z)!=1)
+{
+printf("\nThe value not from list\n");
+exit(0);
+}
+printf("Enter the message(integer value) to be encrypted:\n");
+scanf("%d",&m);
+printf("Before encryption:%d\n",m);
+c=mod(m,e,n);
+printf("After encryption:%d\n",c);
+ 
+printf("The possible Decryption keys Are:");
+for(d=0;d<n;d++)
+{
+if((d*e)%z==1)
+{
+de[j]=d;
+printf(" %d",de[j++]);
+}
+}
+printf("\nChoose D\n");
+scanf("%d",&d);
+x=mod(c,d,n);
+printf("After decryption=%d\n",x);
+return 0;
+}
+
+
+
+
+
+Sample Output 
+Enter the value of P & Q
+7 11
+ 1 7 11 13 17 19 23 29 31 37 41 43 47 49 53 59 61 67 71 73
+Choose e
+7
+Enter the message (integer value) to be encrypted:
+9
+Before encryption:9
+After encryption:37
+The possible Decryption Keys Are: 43
+Choose D
+43
+After decryption=9
+

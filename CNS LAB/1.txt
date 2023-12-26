@@ -1,0 +1,104 @@
+Substitution Cipher
+Source Code
+#include<stdio.h>
+ int main()
+{
+   char message[100], ch, str;
+   int i, key, x;
+   printf("Enter a message : ");
+   gets(message);
+   printf("Enter key: ");
+   scanf("%d", &key);
+ 
+  printf("\nPlease choose following options:\n");
+  printf("1 = Encrypt the string.\n");
+  printf("2 = Decrypt the string.\n");
+  scanf("%d", &x);
+ 
+  //using switch case statements
+ 
+   switch(x)
+  {
+  case 1:
+      for(i = 0; message[i] != '\0'; ++i)
+       {
+           ch = message[i];
+           if(ch >= 'a' && ch <= 'z')
+           {
+               ch = ch + key;
+               if(ch > 'z')
+               {
+                   ch = ch - 'z' + 'a' - 1;
+               }
+               message[i] = ch;
+ 
+           }
+           else if(ch >= 'A' && ch <= 'Z')
+           {
+               ch = ch + key;
+               if(ch > 'Z')
+               {
+                   ch = ch - 'Z' + 'A' - 1;
+               }
+               message[i] = ch;
+           }
+        }
+ 
+       printf("Encrypted message: %s", message);
+       break;
+ 
+  case 2:
+     for(i = 0; message[i] != '\0'; ++i)
+     {
+       ch = message[i];
+       if(ch >= 'a' && ch <= 'z')
+       {
+           ch = ch - key;
+           if(ch < 'a')
+           {
+               ch = ch + 'z' - 'a' + 1;
+           }
+           message[i] = ch;
+       }
+       else if(ch >= 'A' && ch <= 'Z')
+       {
+       ch = ch - key;
+       if(ch < 'A')
+       {
+           ch = ch + 'Z' - 'A' + 1;
+       }
+       message[i] = ch;
+       }
+     }
+       printf("Decrypted message: %s", message);
+     break;
+ 
+  default:
+     printf("\nError\n");
+  }
+ 
+return 0;
+}
+
+
+
+
+Sample Output 
+Enter a message : I am studying Data Encryption
+Enter key: 4
+Please choose following options:
+1 = Encrypt the string.
+2 = Decrypt the string.
+1
+Encrypted message: M eq wxyhcmrk Hexe Irgvctxmsr
+
+
+Enter a message : M eq wxyhcmrk Hexe Irgvctxmsr
+Enter key: 4
+Please choose following options:
+1 = Encrypt the string.
+2 = Decrypt the string.
+2
+Decrypted message: I am studying Data Encryption
+—---------------------------------------------------------------------
+

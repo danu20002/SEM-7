@@ -1,0 +1,59 @@
+Password Strength
+ 
+int main()
+{
+   int i,n,a=0,d=0,s=0;
+   char p[10];
+   printf("Enter the Password: ");
+   gets(p);
+   n=strlen(p);
+ 
+   if(n>=6)
+   {
+       for(i=0;i<n;i++)
+       {
+           if(isalpha(p[i]))
+           {
+               a+=1;
+           }
+           else if(isdigit(p[i]))
+           {
+               d+=1;
+           }
+           else
+           {
+               s+=1;
+           }
+       }
+       if(a>=1 && d>=1 && s>=1)
+       {
+           printf("Strong Password");
+ 
+       }
+       else if((a>=1 && d>=1) || (a>=1 && s>1) || (d>=1 && s>=1))
+       {
+           printf("Moderate Password");
+       }
+       else
+       {
+           printf("Weak Password");
+       }
+   }
+   else
+   {
+       printf("Invalid Password");
+   }
+ 
+}
+
+
+Sample Output 
+Enter password  :  aw1
+Invalid Password
+Enter password  :  adckex
+Weak Password
+Enter password  :  abc123
+Moderate Password
+Enter password  :  abc2#@
+Strong Password
+
